@@ -4,9 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="index.css" />
     <script src="db.js"></script>
 
     <title>FruitList</title>
+    <script>
+      async function fetchDataJason() {
+        let response = await fetch("db.json");
+        console.log(response);
+      }
+    </script>
   </head>
-  <body></body>
+  <body onload="fetchDataJason()">
+    <h1>FruitList</h1>
+    <div id="content"></div>
+  </body>
 </html>
